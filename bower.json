@@ -1,0 +1,19 @@
+{
+  "name": "purescript-node-he",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/justinwoo/purescript-node-he.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "purescript-test-unit": "^11.0.0"
+  }
+}

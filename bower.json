@@ -14,6 +14,6 @@
   "dependencies": {
   },
   "devDependencies": {
-    "purescript-test-unit": "^11.0.0"
+    "purescript-test-unit": "justinwoo/purescript-test-unit#compiler/0.12"
   }
 }

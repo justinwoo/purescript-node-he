@@ -1,23 +1,15 @@
 module Test.Main where
 
 import Prelude
-import Control.Monad.Aff.AVar (AVAR)
-import Control.Monad.Aff.Console (CONSOLE, log)
-import Control.Monad.Eff (Eff)
+
 import Data.String.HtmlElements (decode, encode)
+import Effect (Effect)
 import Test.Unit (suite, test)
 import Test.Unit.Assert (assert)
-import Test.Unit.Console (TESTOUTPUT)
+import Test.Unit.Console (log)
 import Test.Unit.Main (runTest)
 
-main :: forall e.
-  Eff
-    ( console :: CONSOLE
-    , testOutput :: TESTOUTPUT
-    , avar :: AVAR
-    | e
-    )
-    Unit
+main :: Effect Unit
 main = runTest do
   suite "Data.String.HtmlElements" do
     let target =  "&#x3BC;&#x2019;&#xFF53; &#x65B0; dumpster fire - 01"

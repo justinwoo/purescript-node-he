@@ -9,8 +9,15 @@ module Data.String.HtmlElements
   , defaultDecodeOptions
   ) where
 
-foreign import encode' :: EncodeOptions -> String -> String
-foreign import decode' :: DecodeOptions -> String -> String
+foreign import encodeWith :: EncodeOptions -> String -> String
+
+encode' :: EncodeOptions -> String -> String
+encode' = encodeWith
+
+foreign import decodeWith :: DecodeOptions -> String -> String
+
+decode' :: DecodeOptions -> String -> String
+decode' = decodeWith
 
 type EncodeOptions =
   { useNamedReferences :: Boolean

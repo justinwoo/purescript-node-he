@@ -1,12 +1,12 @@
 var he = require('he');
 
-exports["encode'"] = function (options) {
+exports.encodeWith = function (options) {
   return function (string) {
     return he.encode(string, options);
   };
 };
 
-exports["decode'"] = function (options) {
+exports.decodeWith = function (options) {
   return function(string) {
     return he.decode(string, options);
   };
